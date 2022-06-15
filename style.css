@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #555;
+}
+.title{
+    color: #FFF;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px #000, 1px 1px 8px #000;
+    font-family: sans-serif;
+
+}
+.clouds{
+    margin-top: 50px;
+    margin-left: 120px;
+    width: 400px;
+    position: absolute;
+    
+    user-select: none;
+}
+.clouds-animation{
+    animation: clouds 15s infinite linear;
+}
+.game-board{
+    border-radius: 20px;
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    user-select: none;
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    
+    user-select: none;
+}
+.pipe-animation{
+    animation: pipe-animation 3s infinite linear;
+}
+.marioRun{
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    user-select: none;
+}
+.jump{
+    animation: mario-jump 0.8s ease-out;
+}
+.score2{
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000, 1px 1px 8px #000;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 25px 72px 0 0;
+    padding: 10px;
+    user-select: none;
+}
+.score{
+    font-size: 40px;
+    font-family: 'Kaushan Script', cursive;
+    color: #FFF;
+    display: inline-block;
+    text-shadow: 1px 1px 1px #000, 1px 1px 8px #000;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    user-select: none;
+}
+.restart{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 220px;
+}
+.restart-button, .game-over{
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 220px;
+}
+.start-button{
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+@keyframes clouds{
+   0%{
+        right: -400px;
+    }100%{
+        right: 110%;
+    } 
+}
+@keyframes mario-jump{
+    0%{
+        bottom: 0;
+    }40%{
+        bottom: 120px;
+    }50%{
+        bottom: 120px;
+    }60%{
+        bottom: 120px;
+    }100%{
+        bottom: 0;
+    }
+}
+@keyframes pipe-animation{
+    0%{
+        right: -80px;
+    }100%{
+        right: 110%;
+    }
+}
